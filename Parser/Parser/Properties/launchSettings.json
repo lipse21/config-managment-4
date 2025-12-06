@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Parser": {
+      "commandName": "Project",
+      "commandLineArgs": "-i \"C:\\Games\\config-managment-4\\Parser\\Parser\\test_inputs\\test_basic.txt\" -o output.yaml"
+    }
+  }
+}

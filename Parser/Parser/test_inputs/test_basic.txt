@@ -1,0 +1,7 @@
+var port := 8080;
+var host := q(localhost);
+
+@{
+  SERVER = q(production);
+  PORT = $+ port 1$;
+}
