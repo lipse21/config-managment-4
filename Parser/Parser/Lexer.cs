@@ -45,15 +45,19 @@ namespace Parser
                 return ReadString();
             }
 
+           
+            if (current == '0' && _position + 1 < _input.Length)
+            {
+                char nextChar = _input[_position + 1];
+                if (nextChar == 'x' || nextChar == 'X')
+                {
+                    return ReadHexNumber();
+                }
+            }
+
             if (char.IsDigit(current))
             {
                 return ReadNumber();
-            }
-
-            if (current == '0' && _position + 1 < _input.Length &&
-                (_input[_position + 1] == 'x' || _input[_position + 1] == 'X'))
-            {
-                return ReadHexNumber();
             }
 
             if (char.IsLetter(current) || current == '_')
@@ -86,16 +90,24 @@ namespace Parser
             int line = _line;
             int col = _column;
 
+            // Пропускаем '0x' или '0X'
             _position += 2;
             _column += 2;
 
-            while (_position < _input.Length &&
-                   (char.IsDigit(_input[_position]) ||
-                    (_input[_position] >= 'a' && _input[_position] <= 'f') ||
-                    (_input[_position] >= 'A' && _input[_position] <= 'F')))
+            while (_position < _input.Length)
             {
-                _position++;
-                _column++;
+                char c = _input[_position];
+                if ((c >= '0' && c <= '9') ||
+                    (c >= 'a' && c <= 'f') ||
+                    (c >= 'A' && c <= 'F'))
+                {
+                    _position++;
+                    _column++;
+                }
+                else
+                {
+                    break;
+                }
             }
 
             string value = _input.Substring(start, _position - start);

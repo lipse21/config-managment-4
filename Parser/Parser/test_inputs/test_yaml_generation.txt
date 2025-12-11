@@ -1,0 +1,31 @@
+﻿var app_name := q(My Application);
+var version := 1;
+
+@{
+  METADATA = @{
+    NAME = app_name;
+    VERSION = $+ version 0$;
+    AUTHOR = q(John Doe);
+    LICENSE = q(MIT);
+  };
+  
+  NETWORK = @{
+    TIMEOUT = 30;
+    RETRIES = 3;
+    PORTS = @{
+      HTTP = 80;
+      HTTPS = 443;
+      API = 8080;
+    };
+  };
+  
+  FEATURES = @{
+    ENABLED = q(true);
+    MODE = q(advanced);
+    LIMITS = @{
+      MAX_USERS = 1000;
+      MAX_REQUESTS = 100;
+      CACHE_SIZE = 0x200;
+    };
+  };
+}

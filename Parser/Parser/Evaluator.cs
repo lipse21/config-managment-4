@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Parser
 {
@@ -24,6 +21,11 @@ namespace Parser
             };
         }
 
+        public Dictionary<string, object> EvaluateToDictionary(DictNode node)
+        {
+            return EvaluateDictionary(node);
+        }
+
         private object EvaluateVariable(VariableNode node)
         {
             if (_variableValues.TryGetValue(node.Name, out var value))
@@ -38,7 +40,15 @@ namespace Parser
 
             foreach (var kvp in node.Items)
             {
-                result[kvp.Key] = Evaluate(kvp.Value);
+                var value = Evaluate(kvp.Value);
+
+                // Если значение - словарь, рекурсивно преобразуем его
+                if (value is DictNode nestedDict)
+                {
+                    value = EvaluateDictionary(nestedDict);
+                }
+
+                result[kvp.Key] = value;
             }
 
             return result;

@@ -7,32 +7,36 @@
       "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\arguments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\arguments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\lexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\lexer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\yamlgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\yamlgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\astnodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\astnodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\tokentype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|c:\\games\\config-managment-4\\parser\\parser\\arguments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBB018C-E552-428B-8BE1-7E66D7F2DD10}|Parser\\Parser.csproj|solutionrelative:parser\\arguments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,26 +54,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "YamlGenerator.cs",
+              "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\YamlGenerator.cs",
+              "RelativeDocumentMoniker": "Parser\\YamlGenerator.cs",
+              "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\YamlGenerator.cs",
+              "RelativeToolTip": "Parser\\YamlGenerator.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCsAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:07:12.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Evaluator.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\Evaluator.cs",
               "RelativeDocumentMoniker": "Parser\\Evaluator.cs",
               "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\Evaluator.cs",
               "RelativeToolTip": "Parser\\Evaluator.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBYAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T11:21:57.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Parser.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\Parser.cs",
               "RelativeDocumentMoniker": "Parser\\Parser.cs",
               "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\Parser.cs",
               "RelativeToolTip": "Parser\\Parser.cs",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAAwKAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAcwOQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T11:19:57.064Z",
               "EditorCaption": ""
@@ -84,12 +101,11 @@
               "RelativeToolTip": "Parser\\AstNodes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T11:17:06.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T11:17:06.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TokenType.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\TokenType.cs",
               "RelativeDocumentMoniker": "Parser\\TokenType.cs",
@@ -97,12 +113,11 @@
               "RelativeToolTip": "Parser\\TokenType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T19:35:07.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T19:35:07.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Token.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\Token.cs",
               "RelativeDocumentMoniker": "Parser\\Token.cs",
@@ -110,8 +125,7 @@
               "RelativeToolTip": "Parser\\Token.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T19:35:05.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T19:35:05.358Z"
             },
             {
               "$type": "Document",
@@ -121,14 +135,14 @@
               "RelativeDocumentMoniker": "Parser\\Lexer.cs",
               "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\Lexer.cs",
               "RelativeToolTip": "Parser\\Lexer.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAQwAIBAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-06T19:35:01.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Arguments.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\Arguments.cs",
               "RelativeDocumentMoniker": "Parser\\Arguments.cs",
@@ -136,8 +150,7 @@
               "RelativeToolTip": "Parser\\Arguments.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T19:34:59.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T19:34:59.422Z"
             },
             {
               "$type": "Document",
@@ -145,9 +158,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Games\\config-managment-4\\Parser\\Parser\\Program.cs",
               "RelativeDocumentMoniker": "Parser\\Program.cs",
-              "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\Program.cs",
-              "RelativeToolTip": "Parser\\Program.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAwwLwAAAAmAAAAAAAAAA==",
+              "ToolTip": "C:\\Games\\config-managment-4\\Parser\\Parser\\Program.cs*",
+              "RelativeToolTip": "Parser\\Program.cs*",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAowNkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-06T19:12:26.086Z",
               "EditorCaption": ""

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Parser
 {
@@ -36,7 +33,7 @@ namespace Parser
                 }
                 else if (Match(TokenType.Semicolon))
                 {
-                    
+                    // Игнорируем лишние точки с запятой
                 }
                 else
                 {
@@ -141,7 +138,7 @@ namespace Parser
             var line = Current(-1).Line;
             var column = Current(-1).Column;
 
-            
+            // Определяем операцию
             ExpressionNode.OperationType operation;
             if (Match(TokenType.Plus))
                 operation = ExpressionNode.OperationType.Add;
@@ -155,10 +152,10 @@ namespace Parser
                 throw new ParseException($"Ожидалась операция (+, -, *, min), получено: {Current().Type}",
                     Current().Line, Current().Column);
 
-            
+            // Парсим левый операнд
             var left = ParseValue();
 
-            
+            // Парсим правый операнд
             var right = ParseValue();
 
             Consume(TokenType.Dollar, "Ожидалось '$' в конце выражения");

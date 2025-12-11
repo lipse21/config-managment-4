@@ -7,7 +7,6 @@ namespace Parser
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             if (args.Length == 0)
             {
                 PrintUsage();
@@ -32,9 +31,12 @@ namespace Parser
                 }
 
                 string inputText = File.ReadAllText(arguments.InputFile);
+                inputText = inputText.Replace("\r\n", "\n").Replace("\r", "\n");
+                Console.WriteLine("Файл прочитан: " + arguments.InputFile);
                 Console.WriteLine("Файл прочитан: " + arguments.InputFile);
 
-               
+
+                
                 Console.WriteLine("\n=== Лексический анализ ===");
                 Lexer lexer = new Lexer(inputText);
                 var tokens = lexer.Tokenize();
@@ -60,7 +62,7 @@ namespace Parser
                     return;
                 }
 
-               
+                
                 Console.WriteLine("\nПервые 20 токенов:");
                 for (int i = 0; i < Math.Min(20, tokens.Count); i++)
                 {
@@ -80,7 +82,7 @@ namespace Parser
                 try
                 {
                     ast = parser.Parse();
-                    Console.WriteLine("   AST успешно построен");
+                    Console.WriteLine(" AST успешно построен");
                     Console.WriteLine($"  Объявлено переменных: {ast.Variables.Count}");
                     Console.WriteLine($"  Найдено словарей: {ast.Dictionaries.Count}");
 
@@ -97,23 +99,23 @@ namespace Parser
                 catch (ParseException ex)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\n   Ошибка парсинга: " + ex.Message);
+                    Console.WriteLine("\n Ошибка парсинга: " + ex.Message);
                     Console.ResetColor();
                     return;
                 }
                 catch (Exception ex)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\n   Неожиданная ошибка при парсинге: " + ex.Message);
+                    Console.WriteLine("\n Неожиданная ошибка при парсинге: " + ex.Message);
                     Console.ResetColor();
                     return;
                 }
 
-               
+                
                 Console.WriteLine("\n=== Вычисление константных выражений ===");
                 Evaluator evaluator = new Evaluator();
 
-               
+              
                 Console.WriteLine("  Вычисление переменных:");
                 foreach (var varDecl in ast.Variables)
                 {
@@ -126,13 +128,13 @@ namespace Parser
                     catch (EvaluationException ex)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"      Ошибка вычисления переменной {varDecl.Name}: {ex.Message}");
+                        Console.WriteLine($"     Ошибка вычисления переменной {varDecl.Name}: {ex.Message}");
                         Console.ResetColor();
                         return;
                     }
                 }
 
-               
+                
                 Console.WriteLine("\n  Вычисление словарей:");
                 int dictNumber = 1;
                 foreach (var dict in ast.Dictionaries)
@@ -156,10 +158,45 @@ namespace Parser
                     catch (EvaluationException ex)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"      Ошибка вычисления словаря: {ex.Message}");
+                        Console.WriteLine($"     Ошибка вычисления словаря: {ex.Message}");
                         Console.ResetColor();
                         return;
                     }
+                }
+
+                
+                Console.WriteLine("\n=== Генерация YAML ===");
+
+                YamlGenerator yamlGenerator = new YamlGenerator(evaluator);
+                string yamlContent;
+
+                try
+                {
+                    yamlContent = yamlGenerator.Generate(ast);
+                    Console.WriteLine(" YAML успешно сгенерирован");
+
+                    
+                    Console.WriteLine("\nПредпросмотр YAML (первые 20 строк):");
+                    var yamlLines = yamlContent.Split('\n');
+                    for (int i = 0; i < Math.Min(20, yamlLines.Length); i++)
+                    {
+                        if (!string.IsNullOrEmpty(yamlLines[i]))
+                        {
+                            Console.WriteLine($"  {yamlLines[i]}");
+                        }
+                    }
+                    if (yamlLines.Length > 20)
+                    {
+                        Console.WriteLine($"  ... и еще {yamlLines.Length - 20} строк");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($" Ошибка генерации YAML: {ex.Message}");
+                    Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                    Console.ResetColor();
+                    yamlContent = "# Ошибка генерации YAML\n" + ex.Message;
                 }
 
                 
@@ -169,30 +206,21 @@ namespace Parser
                     Directory.CreateDirectory(outputDir);
                 }
 
-                
-                string yamlContent = "# Результат парсинга (YAML будет потом)\n";
-                yamlContent += $"# Файл: {Path.GetFileName(arguments.InputFile)}\n";
-                yamlContent += $"# Время обработки: {DateTime.Now}\n\n";
-
-               
-                if (ast.Variables.Count > 0)
-                {
-                    yamlContent += "# Объявленные переменные:\n";
-                    foreach (var varDecl in ast.Variables)
-                    {
-                        yamlContent += $"#   {varDecl.Name}\n";
-                    }
-                    yamlContent += "\n";
-                }
-
                 File.WriteAllText(arguments.OutputFile, yamlContent);
-                Console.WriteLine("\n  Файл создан: " + arguments.OutputFile);
-                Console.WriteLine("\n  Этап 2 завершен успешно! Парсер работает корректно.");
+                Console.WriteLine($"\n✓ Файл сохранен: {arguments.OutputFile}");
+                Console.WriteLine($"  Размер: {yamlContent.Length} символов, {yamlContent.Split('\n').Length} строк");
+
+                Console.WriteLine("\n ПРОГРАММА ЗАВЕРШЕНА УСПЕШНО!");
+                Console.WriteLine(" Все этапы выполнены:");
+                Console.WriteLine("   1. Лексический анализ ");
+                Console.WriteLine("   2. Синтаксический анализ ");
+                Console.WriteLine("   3. Вычисление выражений ");
+                Console.WriteLine("   4. Генерация YAML ");
             }
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\n  Критическая ошибка: " + ex.Message);
+                Console.WriteLine("\n✗ Критическая ошибка: " + ex.Message);
                 Console.WriteLine("StackTrace: " + ex.StackTrace);
                 Console.ResetColor();
             }
@@ -233,11 +261,11 @@ namespace Parser
             Console.WriteLine("Использование: Parser -i <input_file> -o <output_file>");
             Console.WriteLine("Пример: Parser -i test.txt -o output.yaml");
             Console.WriteLine("\nПримеры тестовых файлов:");
-            Console.WriteLine("  test_inputs\\test_basic.txt      - базовый тест");
-            Console.WriteLine("  test_inputs\\test_parser1.txt    - простой парсер тест");
-            Console.WriteLine("  test_inputs\\test_parser2.txt    - вложенные словари");
-            Console.WriteLine("  test_inputs\\test_parser3.txt    - выражения");
-            Console.WriteLine("  test_inputs\\test_errors.txt     - тест ошибок");
+            Console.WriteLine("  test_inputs\\test_parser1.txt      - простой парсер тест");
+            Console.WriteLine("  test_inputs\\test_parser2.txt      - вложенные словари");
+            Console.WriteLine("  test_inputs\\test_parser3.txt      - выражения");
+            Console.WriteLine("  test_inputs\\test_parser_errors.txt - тест ошибок");
+            Console.WriteLine("  test_inputs\\test_yaml_generation.txt - полный тест YAML");
             Console.WriteLine();
         }
 
@@ -246,10 +274,10 @@ namespace Parser
             Console.WriteLine("\n=== Интерактивный режим ===");
             Console.WriteLine("Введите пути к файлам (или нажмите Enter для значений по умолчанию)");
 
-            Console.Write("Входной файл [test_inputs\\test_basic.txt]: ");
+            Console.Write("Входной файл [test_inputs\\test_parser1.txt]: ");
             string inputFile = Console.ReadLine();
             if (string.IsNullOrEmpty(inputFile))
-                inputFile = "test_inputs\\test_basic.txt";
+                inputFile = "test_inputs\\test_parser1.txt";
 
             Console.Write("Выходной файл [output.yaml]: ");
             string outputFile = Console.ReadLine();
