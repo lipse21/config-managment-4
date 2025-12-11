@@ -1,0 +1,13 @@
+var timeout := 30;
+var env := q(development);
+
+@{
+  SERVER = @{
+    HOST = q(127.0.0.1);
+    PORT = 8080;
+  };
+  SETTINGS = @{
+    TIMEOUT = timeout;
+    ENVIRONMENT = env;
+  };
+}

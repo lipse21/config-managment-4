@@ -2,7 +2,7 @@
   "profiles": {
     "Parser": {
       "commandName": "Project",
-      "commandLineArgs": "-i \"C:\\Games\\config-managment-4\\Parser\\Parser\\test_inputs\\test_basic.txt\" -o output.yaml"
+      "commandLineArgs": "-i \"C:\\Games\\config-managment-4\\Parser\\Parser\\test_inputs\\test_parser1.txt\" -o \"C:\\Games\\config-managment-4\\Parser\\Parser\\output1.yaml\""
     }
   }
 }

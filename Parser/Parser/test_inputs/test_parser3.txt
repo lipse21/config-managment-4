@@ -1,0 +1,10 @@
+var a := 20;
+var b := 5;
+
+@{
+  SUM = $+ a b$;
+  DIFF = $- a b$;
+  MUL = $* a b$;
+  MIN = $min a b$;
+  HEX = 0xFF;
+}

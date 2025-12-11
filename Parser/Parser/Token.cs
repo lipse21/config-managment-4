@@ -17,7 +17,7 @@
 
         public override string ToString()
         {
-            return Type + "('" + Value + "') at " + Line + ":" + Column;
+            return $"{Type}('{Value}') at {Line}:{Column}";
         }
     }
 }

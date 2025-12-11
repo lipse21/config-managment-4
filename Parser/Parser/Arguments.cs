@@ -1,5 +1,4 @@
-﻿namespace Parser
-{
+﻿
     namespace Parser
     {
         class Arguments
@@ -8,4 +7,4 @@
             public string OutputFile { get; set; }
         }
     }
-}
+
